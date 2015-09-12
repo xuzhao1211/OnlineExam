@@ -1,0 +1,26 @@
+{% extends "misago/base.html" %}
+{% load i18n %}
+
+
+{% block title %}{% trans "Request blocked" %} | {{ block.super }}{% endblock %}
+
+
+{% block content %}
+<div class="error-page error-csrf">
+  <div class="container">
+    <div class="error">
+
+      <div class="error-icon">
+        <i class="material-icons">highlight_off</i>
+      </div>
+
+      <div class="error-message">
+        <p class="lead">{% trans "Suspicious request blocked." %}</p>
+        <p>{% trans "This is usually caused by your browser not accepting or using outdated cookies." %}</p>
+        <p>{% trans "Check your browser configuration and try again." %}</p>
+      </div>
+
+    </div>
+  </div>
+</div>
+{% endblock content %}
